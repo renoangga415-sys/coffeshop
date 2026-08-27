@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kopi Klasik - Senandung Rasa & Kenangan</title>
-    <!-- Font Google Classic: Playfair Display & Merriweather -->
+    <!-- Font Google Classic -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -150,15 +150,26 @@
 
         .menu-item {
             background-color: var(--bg-card);
-            padding: 25px;
-            border-radius: 4px;
+            border-radius: 6px;
             border: 1px solid rgba(200, 157, 124, 0.15);
-            transition: transform 0.3s ease;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .menu-item:hover {
             transform: translateY(-5px);
             border-color: var(--primary-accent);
+        }
+
+        .menu-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(200, 157, 124, 0.2);
+        }
+
+        .menu-content {
+            padding: 20px;
         }
 
         .menu-header {
@@ -171,7 +182,7 @@
         }
 
         .menu-name {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--text-light);
         }
 
@@ -294,56 +305,74 @@
         <div class="menu-grid">
             <!-- Item 1 -->
             <div class="menu-item">
-                <div class="menu-header">
-                    <h3 class="menu-name">Espresso Classic</h3>
-                    <span class="menu-price">Rp 22.000</span>
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?q=80&w=600&auto=format&fit=crop" alt="Espresso Classic" class="menu-img">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h3 class="menu-name">Espresso Classic</h3>
+                        <span class="menu-price">Rp 22.000</span>
+                    </div>
+                    <p class="menu-desc">Ekstraksi biji kopi arabika murni dengan krema yang padat dan aroma kuat.</p>
                 </div>
-                <p class="menu-desc">Ekstraksi biji kopi arabika murni dengan krema yang padat dan aroma kuat.</p>
             </div>
 
             <!-- Item 2 -->
             <div class="menu-item">
-                <div class="menu-header">
-                    <h3 class="menu-name">Kopi Tubruk Heritage</h3>
-                    <span class="menu-price">Rp 18.000</span>
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" alt="Kopi Tubruk Heritage" class="menu-img">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h3 class="menu-name">Kopi Tubruk Heritage</h3>
+                        <span class="menu-price">Rp 18.000</span>
+                    </div>
+                    <p class="menu-desc">Kopi hitam gaya tradisional dengan tingkat kehalusan khusus khas Nusantara.</p>
                 </div>
-                <p class="menu-desc">Kopi hitam gaya tradisional dengan tingkat kehalusan khusus khas Nusantara.</p>
             </div>
 
             <!-- Item 3 -->
             <div class="menu-item">
-                <div class="menu-header">
-                    <h3 class="menu-name">Classic Latte</h3>
-                    <span class="menu-price">Rp 28.000</span>
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=600&auto=format&fit=crop" alt="Classic Latte" class="menu-img">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h3 class="menu-name">Classic Latte</h3>
+                        <span class="menu-price">Rp 28.000</span>
+                    </div>
+                    <p class="menu-desc">Perpaduan seimbang antara espresso pekat dan susunya yang creamy.</p>
                 </div>
-                <p class="menu-desc">Perpaduan seimbang antara espresso pekat dan susunya yang creamy.</p>
             </div>
 
             <!-- Item 4 -->
             <div class="menu-item">
-                <div class="menu-header">
-                    <h3 class="menu-name">Cappuccino Traditional</h3>
-                    <span class="menu-price">Rp 28.000</span>
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop" alt="Cappuccino Traditional" class="menu-img">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h3 class="menu-name">Cappuccino Traditional</h3>
+                        <span class="menu-price">Rp 28.000</span>
+                    </div>
+                    <p class="menu-desc">Segelas espresso dengan foam susu tebal dan taburan bubuk cokelat manis.</p>
                 </div>
-                <p class="menu-desc">Segelas espresso dengan foam susu tebal dan taburan bubuk cokelat manis.</p>
             </div>
 
             <!-- Item 5 -->
             <div class="menu-item">
-                <div class="menu-header">
-                    <h3 class="menu-name">Mokapot Brew</h3>
-                    <span class="menu-price">Rp 25.000</span>
+                <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?q=80&w=600&auto=format&fit=crop" alt="Mokapot Brew" class="menu-img">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h3 class="menu-name">Mokapot Brew</h3>
+                        <span class="menu-price">Rp 25.000</span>
+                    </div>
+                    <p class="menu-desc">Metode ekstraksi Italia kuno yang menghasilkan citarasa kaya dan sedikit tajam.</p>
                 </div>
-                <p class="menu-desc">Metode ekstraksi Italia kuno yang menghasilkan citarasa kaya dan sedikit tajam.</p>
             </div>
 
             <!-- Item 6 -->
             <div class="menu-item">
-                <div class="menu-header">
-                    <h3 class="menu-name">Roti Bakar Kaya</h3>
-                    <span class="menu-price">Rp 20.000</span>
+                <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=600&auto=format&fit=crop" alt="Roti Bakar Kaya" class="menu-img">
+                <div class="menu-content">
+                    <div class="menu-header">
+                        <h3 class="menu-name">Roti Bakar Kaya</h3>
+                        <span class="menu-price">Rp 20.000</span>
+                    </div>
+                    <p class="menu-desc">Pendamping kopi sempurna: roti panggang mentega dengan srikaya buatan rumah.</p>
                 </div>
-                <p class="menu-desc">Pendamping kopi sempurna: roti panggang mentega dengan srikaya buatan rumah.</p>
             </div>
         </div>
     </section>
@@ -352,7 +381,7 @@
     <section class="about" id="about">
         <div class="about-text">
             <h2>Tentang Kedai Kami</h2>
-            <p>Didirikan sejak tahun 1998, **Kopi Klasik** hadir untuk merawat tradisi minum kopi yang otentik di tengah hiruk-pikuk zaman modern.</p>
+            <p>Didirikan sejak tahun 1998, Kopi Klasik hadir untuk merawat tradisi minum kopi yang otentik di tengah hiruk-pikuk zaman modern.</p>
             <p>Kami meyakini bahwa secangkir kopi lebih dari sekadar minuman pembuka hari, melainkan jembatan cerita dan hangatnya kebersamaan. Setiap biji disangrai secara manual untuk mempertahankan cita rasa terbaiknya.</p>
         </div>
         <div class="about-image">
@@ -384,4 +413,4 @@
     </footer>
 
 </body>
-  </html>
+</html>
